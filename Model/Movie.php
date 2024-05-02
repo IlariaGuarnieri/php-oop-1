@@ -36,7 +36,9 @@ class Movie{
   }
 
   public function getEcho(){
-    echo "$this->year, $this->subtitle, $this->director";
+    echo "$this->year, 
+    $this->subtitle, 
+    $this->director";
   }
 
 }
