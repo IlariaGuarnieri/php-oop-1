@@ -7,16 +7,18 @@ class Movie{
   public $year;
   public $subtitle;
   public $director;
+  public $actors;
 
-  public function __construct(string $_title, string $_description, int $_year,)
+  public function __construct(string $_title, string $_description, int $_year, array $_actors)
   {
     $this->name = $_title;
     $this->description = $_description;
     $this->year = $_year;
+    $this-> actors= $_actors;
   }
 
   // SETTER
-
+// uso il set perche ho usato il private
   public function setName(){
     $this->getName();
   }
@@ -33,7 +35,7 @@ class Movie{
     echo "$this->description";
   }
 
-  public function getYear(){
+  public function getEcho(){
     echo "$this->year, $this->subtitle, $this->director";
   }
 
