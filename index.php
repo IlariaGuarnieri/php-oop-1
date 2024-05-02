@@ -3,11 +3,16 @@ require_once __DIR__ . '/Model/Movie.php';
 
 // inizializzo nuova istanza
 $Barbie = new Movie('Barbie', 'un bel film', 1990, ['luca', 'mario','carla']);
-$Barbie->subtitle= 'ciaociao';
-$Barbie->director= 'Ugo';
+$Barbie->subtitle= 'Fantasia';
+$Barbie->director= 'Greta Gerwig';
+
 $Gossip_girl = new Movie ('Gossip Girl', 'gossip, ragazze', 2010,['lucia', 'marco','mirco']);
-$Gossip_girl->subtitle= 'ciao2';
-$Gossip_girl->director= 'Pino';
+$Gossip_girl->subtitle= 'Adolescenza';
+$Gossip_girl->director= 'Amy Heckerling';
+
+$Re_leone = new Movie('Il Re Leone','classici disney',2005, ['simba', 'nala', 'mufasa']);
+$Re_leone->subtitle= 'Il cerchio della vita';
+$Re_leone->director= 'Walt Disney';
 // var_dump($Barbie);
 // var_dump($Gossip_girl);
 
@@ -58,6 +63,26 @@ require __DIR__ . '/Partials/Head.php'
   </ul>
   </div>
 </div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h2><?php $Re_leone->getName() ?></h2>
+  <p><?php $Re_leone->getDescription() ?></p>
+  <p><?php $Re_leone->getEcho() ?></p>
+  <ul>
+    <h4>Attori:</h4>
+    <?php foreach ($Re_leone->actors as $actor) : ?>
+      <li>
+        <?php echo $actor ?>
+      </li>
+    <?php endforeach ?>
+  </ul>
+  </div>
+</div>
+
+
+</div>
+
 </div>
 
 </body>
