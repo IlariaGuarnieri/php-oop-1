@@ -8,12 +8,11 @@ class Movie{
   public $subtitle;
   public $director;
 
-  public function __construct(string $_title, string $_description, int $_year)
+  public function __construct(string $_title, string $_description, int $_year,)
   {
     $this->name = $_title;
     $this->description = $_description;
     $this->year = $_year;
-
   }
 
   // SETTER
@@ -21,12 +20,21 @@ class Movie{
   public function setName(){
     $this->getName();
   }
-
+  public function setDescription(){
+    $this->getDescription();
+  }
   // GETTER
 
   public function getName(){
     // uso echo anziche return
     echo "$this->name";
+  }
+  public function getDescription(){
+    echo "$this->description";
+  }
+
+  public function getYear(){
+    echo "$this->year, $this->subtitle, $this->director";
   }
 
 }

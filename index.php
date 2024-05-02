@@ -3,7 +3,11 @@ require_once __DIR__ . '/Model/Movie.php';
 
 // inizializzo nuova istanza
 $Barbie = new Movie('Barbie', 'un bel film', 1990);
-$Gossip_girl = new Movie ('Gossip Girl', 'gossip', 2010);
+$Barbie->subtitle= 'ciaociao';
+$Barbie->director= 'Ugo';
+$Gossip_girl = new Movie ('Gossip Girl', 'gossip, ragazze', 2010);
+$Gossip_girl->subtitle= 'ciao2';
+$Gossip_girl->director= 'Pino';
 var_dump($Barbie);
 var_dump($Gossip_girl);
 ?>
@@ -17,6 +21,12 @@ var_dump($Gossip_girl);
 </head>
 <body>
   
-<h1>Php-oop-1</h1>
+<h1>Movie:</h1>
+<h2><?php $Barbie->getName() ?></h2>
+<h3><?php $Barbie->getDescription() ?></h3>
+<h3><?php $Barbie->getYear() ?></h3>
+<h2><?php $Gossip_girl->getName() ?></h2>
+<h3><?php $Gossip_girl->getDescription() ?></h3>
+<h3><?php $Gossip_girl->getYear() ?></h3>
 </body>
 </html>
